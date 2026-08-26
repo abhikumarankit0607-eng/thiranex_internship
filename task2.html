@@ -1,0 +1,3301 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Abhishek Maurya - B.Tech Computer Science and Engineering student specializing in Artificial Intelligence and Machine Learning.">
+
+    <meta name="keywords"
+          content="Abhishek Maurya, BTech CSE, AI ML, Artificial Intelligence, Machine Learning, Computer Science, Portfolio">
+
+    <meta name="author" content="Abhishek Maurya">
+
+    <meta name="theme-color" content="#070b14">
+
+    <title>
+        Abhishek Maurya | B.Tech CSE AI & ML
+    </title>
+
+    <style>
+
+        /* =========================================================
+           1. DESIGN SYSTEM
+        ========================================================= */
+
+        :root {
+
+            --font-main:
+                Inter,
+                ui-sans-serif,
+                system-ui,
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                sans-serif;
+
+            --radius-sm: 10px;
+            --radius-md: 18px;
+            --radius-lg: 28px;
+            --radius-xl: 40px;
+
+            --container: 1200px;
+
+            --space-1: 0.5rem;
+            --space-2: 0.75rem;
+            --space-3: 1rem;
+            --space-4: 1.5rem;
+            --space-5: 2rem;
+            --space-6: 3rem;
+            --space-7: 4rem;
+            --space-8: 6rem;
+            --space-9: 8rem;
+
+            --transition:
+                250ms cubic-bezier(.2,.8,.2,1);
+        }
+
+
+        /* =========================================================
+           DARK THEME
+        ========================================================= */
+
+        :root,
+        [data-theme="dark"] {
+
+            --bg:
+                #050816;
+
+            --bg-soft:
+                #0b1120;
+
+            --surface:
+                rgba(15, 23, 42, 0.72);
+
+            --surface-solid:
+                #0f172a;
+
+            --surface-hover:
+                #172033;
+
+            --text:
+                #f8fafc;
+
+            --text-soft:
+                #cbd5e1;
+
+            --muted:
+                #94a3b8;
+
+            --border:
+                rgba(148, 163, 184, 0.18);
+
+            --primary:
+                #60a5fa;
+
+            --primary-dark:
+                #2563eb;
+
+            --secondary:
+                #a78bfa;
+
+            --accent:
+                #22d3ee;
+
+            --success:
+                #34d399;
+
+            --danger:
+                #fb7185;
+
+            --shadow:
+                0 25px 70px rgba(0, 0, 0, .35);
+
+            --glow:
+                rgba(96, 165, 250, .22);
+
+            --gradient:
+                linear-gradient(
+                    135deg,
+                    #60a5fa,
+                    #a78bfa,
+                    #22d3ee
+                );
+        }
+
+
+        /* =========================================================
+           LIGHT THEME
+        ========================================================= */
+
+        [data-theme="light"] {
+
+            --bg:
+                #f8fafc;
+
+            --bg-soft:
+                #eef4ff;
+
+            --surface:
+                rgba(255, 255, 255, 0.78);
+
+            --surface-solid:
+                #ffffff;
+
+            --surface-hover:
+                #f1f5f9;
+
+            --text:
+                #0f172a;
+
+            --text-soft:
+                #334155;
+
+            --muted:
+                #64748b;
+
+            --border:
+                rgba(15, 23, 42, 0.12);
+
+            --primary:
+                #2563eb;
+
+            --primary-dark:
+                #1d4ed8;
+
+            --secondary:
+                #7c3aed;
+
+            --accent:
+                #0891b2;
+
+            --success:
+                #059669;
+
+            --danger:
+                #dc2626;
+
+            --shadow:
+                0 25px 70px rgba(15, 23, 42, .10);
+
+            --glow:
+                rgba(37, 99, 235, .16);
+
+            --gradient:
+                linear-gradient(
+                    135deg,
+                    #2563eb,
+                    #7c3aed,
+                    #0891b2
+                );
+        }
+
+
+        /* =========================================================
+           2. RESET
+        ========================================================= */
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+            margin: 0;
+
+            min-height: 100vh;
+
+            font-family: var(--font-main);
+
+            color: var(--text);
+
+            background:
+                var(--bg);
+
+            line-height: 1.7;
+
+            overflow-x: hidden;
+
+            transition:
+                background var(--transition),
+                color var(--transition);
+        }
+
+
+        img,
+        svg {
+            display: block;
+            max-width: 100%;
+        }
+
+
+        button,
+        input,
+        textarea {
+            font: inherit;
+        }
+
+
+        button {
+            cursor: pointer;
+        }
+
+
+        a {
+            color: inherit;
+        }
+
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+
+        /* =========================================================
+           3. ACCESSIBILITY
+        ========================================================= */
+
+        .skip-link {
+
+            position: fixed;
+
+            top: -100px;
+            left: 1rem;
+
+            z-index: 9999;
+
+            padding:
+                .75rem 1.25rem;
+
+            color: white;
+
+            background:
+                #000;
+
+            border-radius:
+                var(--radius-sm);
+
+            text-decoration:
+                none;
+
+            font-weight:
+                800;
+        }
+
+
+        .skip-link:focus {
+            top: 1rem;
+        }
+
+
+        :focus-visible {
+
+            outline:
+                3px solid var(--accent);
+
+            outline-offset:
+                4px;
+        }
+
+
+        /* =========================================================
+           4. CONTAINER
+        ========================================================= */
+
+        .container {
+
+            width:
+                min(
+                    calc(100% - 2rem),
+                    var(--container)
+                );
+
+            margin-inline:
+                auto;
+        }
+
+
+        /* =========================================================
+           5. BACKGROUND EFFECTS
+        ========================================================= */
+
+        body::before {
+
+            content: "";
+
+            position: fixed;
+
+            inset: 0;
+
+            z-index: -2;
+
+            pointer-events: none;
+
+            background:
+                radial-gradient(
+                    circle at 10% 10%,
+                    var(--glow),
+                    transparent 30%
+                ),
+                radial-gradient(
+                    circle at 90% 30%,
+                    rgba(167,139,250,.12),
+                    transparent 30%
+                ),
+                radial-gradient(
+                    circle at 50% 100%,
+                    rgba(34,211,238,.08),
+                    transparent 35%
+                );
+        }
+
+
+        body::after {
+
+            content: "";
+
+            position: fixed;
+
+            inset: 0;
+
+            z-index: -1;
+
+            pointer-events: none;
+
+            opacity: .025;
+
+            background-image:
+                radial-gradient(
+                    var(--text) 1px,
+                    transparent 1px
+                );
+
+            background-size:
+                25px 25px;
+        }
+
+
+        /* =========================================================
+           6. HEADER
+        ========================================================= */
+
+        .site-header {
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 1000;
+
+            backdrop-filter:
+                blur(20px);
+
+            -webkit-backdrop-filter:
+                blur(20px);
+
+            background:
+                color-mix(
+                    in srgb,
+                    var(--bg) 82%,
+                    transparent
+                );
+
+            border-bottom:
+                1px solid var(--border);
+        }
+
+
+        .header-inner {
+
+            min-height:
+                72px;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                space-between;
+
+            gap:
+                var(--space-4);
+        }
+
+
+        .logo {
+
+            display:
+                inline-flex;
+
+            align-items:
+                center;
+
+            gap:
+                .7rem;
+
+            color:
+                var(--text);
+
+            text-decoration:
+                none;
+
+            font-size:
+                1.05rem;
+
+            font-weight:
+                900;
+
+            letter-spacing:
+                -.02em;
+        }
+
+
+        .logo-mark {
+
+            width:
+                38px;
+
+            height:
+                38px;
+
+            display:
+                grid;
+
+            place-items:
+                center;
+
+            border-radius:
+                12px;
+
+            color:
+                white;
+
+            background:
+                var(--gradient);
+
+            box-shadow:
+                0 8px 25px var(--glow);
+        }
+
+
+        .nav {
+
+            display:
+                none;
+
+            align-items:
+                center;
+
+            gap:
+                .35rem;
+        }
+
+
+        .nav a {
+
+            padding:
+                .55rem .8rem;
+
+            border-radius:
+                9px;
+
+            color:
+                var(--muted);
+
+            text-decoration:
+                none;
+
+            font-size:
+                .9rem;
+
+            font-weight:
+                700;
+
+            transition:
+                all var(--transition);
+        }
+
+
+        .nav a:hover,
+        .nav a[aria-current="page"] {
+
+            color:
+                var(--text);
+
+            background:
+                var(--surface-hover);
+        }
+
+
+        .theme-button {
+
+            width:
+                42px;
+
+            height:
+                42px;
+
+            display:
+                grid;
+
+            place-items:
+                center;
+
+            border:
+                1px solid var(--border);
+
+            border-radius:
+                12px;
+
+            color:
+                var(--text);
+
+            background:
+                var(--surface);
+
+            transition:
+                all var(--transition);
+        }
+
+
+        .theme-button:hover {
+
+            transform:
+                translateY(-2px);
+
+            border-color:
+                var(--primary);
+        }
+
+
+        /* =========================================================
+           7. HERO
+        ========================================================= */
+
+        .hero {
+
+            min-height:
+                calc(100svh - 72px);
+
+            display:
+                grid;
+
+            align-items:
+                center;
+
+            padding:
+                var(--space-8) 0;
+        }
+
+
+        .hero-grid {
+
+            display:
+                grid;
+
+            gap:
+                var(--space-7);
+        }
+
+
+        .hero-content {
+            position:
+                relative;
+        }
+
+
+        .badge {
+
+            display:
+                inline-flex;
+
+            align-items:
+                center;
+
+            gap:
+                .5rem;
+
+            padding:
+                .4rem .75rem;
+
+            margin-bottom:
+                var(--space-4);
+
+            border:
+                1px solid var(--border);
+
+            border-radius:
+                999px;
+
+            color:
+                var(--primary);
+
+            background:
+                var(--surface);
+
+            backdrop-filter:
+                blur(15px);
+
+            font-size:
+                .8rem;
+
+            font-weight:
+                800;
+        }
+
+
+        .badge-dot {
+
+            width:
+                7px;
+
+            height:
+                7px;
+
+            border-radius:
+                50%;
+
+            background:
+                var(--success);
+
+            box-shadow:
+                0 0 12px var(--success);
+        }
+
+
+        .hero h1 {
+
+            max-width:
+                850px;
+
+            margin:
+                0;
+
+            font-size:
+                clamp(
+                    2.8rem,
+                    12vw,
+                    7rem
+                );
+
+            line-height:
+                .95;
+
+            letter-spacing:
+                -.065em;
+        }
+
+
+        .gradient-text {
+
+            background:
+                var(--gradient);
+
+            -webkit-background-clip:
+                text;
+
+            background-clip:
+                text;
+
+            color:
+                transparent;
+        }
+
+
+        .hero-description {
+
+            max-width:
+                700px;
+
+            margin:
+                var(--space-5) 0 0;
+
+            color:
+                var(--muted);
+
+            font-size:
+                1rem;
+        }
+
+
+        .hero-actions {
+
+            display:
+                flex;
+
+            flex-wrap:
+                wrap;
+
+            gap:
+                .8rem;
+
+            margin-top:
+                var(--space-5);
+        }
+
+
+        .button {
+
+            display:
+                inline-flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            gap:
+                .5rem;
+
+            min-height:
+                48px;
+
+            padding:
+                .7rem 1.1rem;
+
+            border:
+                1px solid transparent;
+
+            border-radius:
+                12px;
+
+            text-decoration:
+                none;
+
+            font-weight:
+                800;
+
+            transition:
+                transform var(--transition),
+                box-shadow var(--transition),
+                background var(--transition);
+        }
+
+
+        .button-primary {
+
+            color:
+                white;
+
+            background:
+                var(--gradient);
+
+            box-shadow:
+                0 12px 30px var(--glow);
+        }
+
+
+        .button-primary:hover {
+
+            transform:
+                translateY(-3px);
+
+            box-shadow:
+                0 18px 40px var(--glow);
+        }
+
+
+        .button-outline {
+
+            border-color:
+                var(--border);
+
+            background:
+                var(--surface);
+
+            color:
+                var(--text);
+        }
+
+
+        .button-outline:hover {
+
+            transform:
+                translateY(-3px);
+
+            border-color:
+                var(--primary);
+        }
+
+
+        /* =========================================================
+           8. HERO VISUAL
+        ========================================================= */
+
+        .hero-visual {
+
+            min-height:
+                380px;
+
+            display:
+                grid;
+
+            place-items:
+                center;
+
+            position:
+                relative;
+        }
+
+
+        .orbit {
+
+            position:
+                absolute;
+
+            width:
+                280px;
+
+            aspect-ratio:
+                1;
+
+            border:
+                1px solid var(--border);
+
+            border-radius:
+                50%;
+
+            animation:
+                rotate 20s linear infinite;
+        }
+
+
+        .orbit::before,
+        .orbit::after {
+
+            content:
+                "";
+
+            position:
+                absolute;
+
+            width:
+                12px;
+
+            height:
+                12px;
+
+            border-radius:
+                50%;
+
+            background:
+                var(--primary);
+
+            box-shadow:
+                0 0 25px var(--primary);
+        }
+
+
+        .orbit::before {
+
+            top:
+                0;
+
+            left:
+                50%;
+
+            transform:
+                translate(-50%, -50%);
+        }
+
+
+        .orbit::after {
+
+            bottom:
+                15%;
+
+            right:
+                0;
+        }
+
+
+        .profile-card {
+
+            position:
+                relative;
+
+            z-index:
+                2;
+
+            width:
+                min(100%, 290px);
+
+            padding:
+                2rem;
+
+            border:
+                1px solid var(--border);
+
+            border-radius:
+                var(--radius-lg);
+
+            background:
+                var(--surface);
+
+            backdrop-filter:
+                blur(20px);
+
+            box-shadow:
+                var(--shadow);
+
+            text-align:
+                center;
+        }
+
+
+        .profile-avatar {
+
+            width:
+                120px;
+
+            height:
+                120px;
+
+            margin:
+                0 auto 1.25rem;
+
+            display:
+                grid;
+
+            place-items:
+                center;
+
+            border-radius:
+                50%;
+
+            color:
+                white;
+
+            font-size:
+                2.5rem;
+
+            font-weight:
+                900;
+
+            background:
+                var(--gradient);
+
+            box-shadow:
+                0 0 50px var(--glow);
+        }
+
+
+        .profile-card h2 {
+
+            margin:
+                0 0 .4rem;
+
+            font-size:
+                1.4rem;
+        }
+
+
+        .profile-card p {
+
+            margin:
+                .3rem 0;
+
+            color:
+                var(--muted);
+
+            font-size:
+                .85rem;
+        }
+
+
+        /* =========================================================
+           9. SECTION
+        ========================================================= */
+
+        .section {
+
+            padding:
+                var(--space-8) 0;
+        }
+
+
+        .section-header {
+
+            max-width:
+                720px;
+
+            margin-bottom:
+                var(--space-6);
+        }
+
+
+        .section-label {
+
+            margin-bottom:
+                .7rem;
+
+            color:
+                var(--primary);
+
+            font-size:
+                .75rem;
+
+            font-weight:
+                900;
+
+            letter-spacing:
+                .12em;
+
+            text-transform:
+                uppercase;
+        }
+
+
+        .section-title {
+
+            margin:
+                0;
+
+            font-size:
+                clamp(
+                    2rem,
+                    7vw,
+                    3.5rem
+                );
+
+            line-height:
+                1;
+
+            letter-spacing:
+                -.045em;
+        }
+
+
+        .section-description {
+
+            margin-top:
+                1rem;
+
+            color:
+                var(--muted);
+        }
+
+
+        /* =========================================================
+           10. ABOUT GRID
+        ========================================================= */
+
+        .about-grid {
+
+            display:
+                grid;
+
+            gap:
+                var(--space-4);
+        }
+
+
+        .glass-card {
+
+            padding:
+                var(--space-5);
+
+            border:
+                1px solid var(--border);
+
+            border-radius:
+                var(--radius-md);
+
+            background:
+                var(--surface);
+
+            backdrop-filter:
+                blur(18px);
+
+            box-shadow:
+                0 15px 50px rgba(0,0,0,.08);
+
+            transition:
+                transform var(--transition),
+                border-color var(--transition);
+        }
+
+
+        .glass-card:hover {
+
+            transform:
+                translateY(-5px);
+
+            border-color:
+                color-mix(
+                    in srgb,
+                    var(--primary) 40%,
+                    var(--border)
+                );
+        }
+
+
+        .about-text p {
+
+            margin:
+                0 0 1rem;
+
+            color:
+                var(--muted);
+        }
+
+
+        .education-list {
+
+            display:
+                grid;
+
+            gap:
+                1rem;
+
+            margin-top:
+                1.5rem;
+        }
+
+
+        .education-item {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                42px 1fr;
+
+            gap:
+                .9rem;
+
+            align-items:
+                start;
+        }
+
+
+        .education-icon {
+
+            width:
+                42px;
+
+            height:
+                42px;
+
+            display:
+                grid;
+
+            place-items:
+                center;
+
+            border-radius:
+                12px;
+
+            color:
+                var(--primary);
+
+            background:
+                var(--bg-soft);
+
+            border:
+                1px solid var(--border);
+        }
+
+
+        .education-item strong {
+
+            display:
+                block;
+        }
+
+
+        .education-item span {
+
+            color:
+                var(--muted);
+
+            font-size:
+                .85rem;
+        }
+
+
+        /* =========================================================
+           11. SKILLS GRID
+        ========================================================= */
+
+        .skills-grid {
+
+            display:
+                grid;
+
+            gap:
+                1rem;
+        }
+
+
+        .skill-card {
+
+            min-height:
+                210px;
+
+            display:
+                flex;
+
+            flex-direction:
+                column;
+
+            justify-content:
+                space-between;
+        }
+
+
+        .skill-top {
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                space-between;
+
+            gap:
+                1rem;
+        }
+
+
+        .skill-number {
+
+            color:
+                var(--muted);
+
+            font-size:
+                .75rem;
+
+            font-weight:
+                900;
+        }
+
+
+        .skill-icon {
+
+            width:
+                48px;
+
+            height:
+                48px;
+
+            display:
+                grid;
+
+            place-items:
+                center;
+
+            border-radius:
+                14px;
+
+            color:
+                var(--primary);
+
+            background:
+                var(--bg-soft);
+
+            border:
+                1px solid var(--border);
+
+            font-size:
+                1.2rem;
+        }
+
+
+        .skill-card h3 {
+
+            margin:
+                1.5rem 0 .6rem;
+
+            font-size:
+                1.15rem;
+        }
+
+
+        .skill-card p {
+
+            margin:
+                0;
+
+            color:
+                var(--muted);
+
+            font-size:
+                .9rem;
+        }
+
+
+        .skill-tags {
+
+            display:
+                flex;
+
+            flex-wrap:
+                wrap;
+
+            gap:
+                .45rem;
+
+            margin-top:
+                1rem;
+        }
+
+
+        .skill-tags span {
+
+            padding:
+                .3rem .6rem;
+
+            border:
+                1px solid var(--border);
+
+            border-radius:
+                999px;
+
+            color:
+                var(--text-soft);
+
+            font-size:
+                .72rem;
+
+            font-weight:
+                700;
+        }
+
+
+        /* =========================================================
+           12. PROJECT GRID
+        ========================================================= */
+
+        .projects-grid {
+
+            display:
+                grid;
+
+            gap:
+                1rem;
+        }
+
+
+        .project-card {
+
+            position:
+                relative;
+
+            overflow:
+                hidden;
+
+            min-height:
+                300px;
+
+            display:
+                flex;
+
+            flex-direction:
+                column;
+
+            justify-content:
+                space-between;
+        }
+
+
+        .project-card::before {
+
+            content:
+                "";
+
+            position:
+                absolute;
+
+            top:
+                0;
+
+            left:
+                0;
+
+            width:
+                100%;
+
+            height:
+                3px;
+
+            background:
+                var(--gradient);
+
+            transform:
+                scaleX(0);
+
+            transform-origin:
+                left;
+
+            transition:
+                transform var(--transition);
+        }
+
+
+        .project-card:hover::before {
+            transform:
+                scaleX(1);
+        }
+
+
+        .project-number {
+
+            color:
+                var(--muted);
+
+            font-size:
+                .75rem;
+
+            font-weight:
+                900;
+        }
+
+
+        .project-card h3 {
+
+            margin:
+                1.5rem 0 .7rem;
+
+            font-size:
+                1.35rem;
+        }
+
+
+        .project-card p {
+
+            color:
+                var(--muted);
+
+            font-size:
+                .9rem;
+        }
+
+
+        .project-footer {
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                space-between;
+
+            gap:
+                1rem;
+
+            margin-top:
+                1.5rem;
+        }
+
+
+        .project-link {
+
+            color:
+                var(--primary);
+
+            text-decoration:
+                none;
+
+            font-size:
+                .85rem;
+
+            font-weight:
+                800;
+        }
+
+
+        /* =========================================================
+           13. CONTACT
+        ========================================================= */
+
+        .contact-grid {
+
+            display:
+                grid;
+
+            gap:
+                1rem;
+        }
+
+
+        .contact-info {
+
+            display:
+                grid;
+
+            gap:
+                1rem;
+        }
+
+
+        .contact-item {
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            gap:
+                1rem;
+        }
+
+
+        .contact-icon {
+
+            flex:
+                0 0 45px;
+
+            width:
+                45px;
+
+            height:
+                45px;
+
+            display:
+                grid;
+
+            place-items:
+                center;
+
+            border:
+                1px solid var(--border);
+
+            border-radius:
+                13px;
+
+            color:
+                var(--primary);
+
+            background:
+                var(--surface);
+        }
+
+
+        .contact-item small {
+
+            display:
+                block;
+
+            color:
+                var(--muted);
+
+            font-size:
+                .75rem;
+        }
+
+
+        .contact-item a {
+
+            color:
+                var(--text);
+
+            text-decoration:
+                none;
+
+            font-weight:
+                700;
+        }
+
+
+        .contact-form {
+
+            display:
+                grid;
+
+            gap:
+                1rem;
+        }
+
+
+        .form-group {
+
+            display:
+                grid;
+
+            gap:
+                .5rem;
+        }
+
+
+        .form-group label {
+
+            font-size:
+                .85rem;
+
+            font-weight:
+                800;
+        }
+
+
+        .form-group input,
+        .form-group textarea {
+
+            width:
+                100%;
+
+            padding:
+                .85rem 1rem;
+
+            border:
+                1px solid var(--border);
+
+            border-radius:
+                12px;
+
+            color:
+                var(--text);
+
+            background:
+                var(--bg-soft);
+
+            transition:
+                border-color var(--transition),
+                box-shadow var(--transition);
+        }
+
+
+        .form-group textarea {
+
+            min-height:
+                150px;
+
+            resize:
+                vertical;
+        }
+
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+
+            outline:
+                none;
+
+            border-color:
+                var(--primary);
+
+            box-shadow:
+                0 0 0 4px var(--glow);
+        }
+
+
+        .form-status {
+
+            min-height:
+                24px;
+
+            color:
+                var(--success);
+
+            font-size:
+                .85rem;
+
+            font-weight:
+                700;
+        }
+
+
+        /* =========================================================
+           14. FOOTER
+        ========================================================= */
+
+        .footer {
+
+            padding:
+                var(--space-6) 0;
+
+            border-top:
+                1px solid var(--border);
+        }
+
+
+        .footer-inner {
+
+            display:
+                flex;
+
+            flex-direction:
+                column;
+
+            gap:
+                1rem;
+
+            text-align:
+                center;
+        }
+
+
+        .footer p {
+
+            margin:
+                0;
+
+            color:
+                var(--muted);
+
+            font-size:
+                .85rem;
+        }
+
+
+        /* =========================================================
+           15. DESKTOP GRID ARCHITECTURE
+        ========================================================= */
+
+        @media (min-width: 640px) {
+
+            .container {
+
+                width:
+                    min(
+                        calc(100% - 3rem),
+                        var(--container)
+                    );
+            }
+
+
+            .skills-grid {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+
+            .projects-grid {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+
+            .footer-inner {
+
+                flex-direction:
+                    row;
+
+                justify-content:
+                    space-between;
+
+                text-align:
+                    left;
+            }
+        }
+
+
+        @media (min-width: 768px) {
+
+            .nav {
+                display:
+                    flex;
+            }
+
+
+            .hero-grid {
+
+                grid-template-columns:
+                    1.4fr .8fr;
+
+                align-items:
+                    center;
+            }
+
+
+            .about-grid {
+
+                grid-template-columns:
+                    1.3fr .7fr;
+            }
+
+
+            .contact-grid {
+
+                grid-template-columns:
+                    .75fr 1.25fr;
+            }
+
+
+            .projects-grid {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+        }
+
+
+        @media (min-width: 1024px) {
+
+            .container {
+
+                width:
+                    min(
+                        calc(100% - 4rem),
+                        var(--container)
+                    );
+            }
+
+
+            .hero-grid {
+
+                grid-template-columns:
+                    1.25fr .75fr;
+            }
+
+
+            .skills-grid {
+
+                grid-template-columns:
+                    repeat(3, 1fr);
+            }
+
+
+            .projects-grid {
+
+                grid-template-columns:
+                    repeat(3, 1fr);
+            }
+
+
+            .project-card:first-child {
+
+                grid-column:
+                    span 2;
+            }
+
+
+            .project-card:first-child {
+
+                min-height:
+                    360px;
+            }
+
+
+            .section {
+
+                padding:
+                    var(--space-9) 0;
+            }
+        }
+
+
+        @media (min-width: 1280px) {
+
+            .hero h1 {
+
+                font-size:
+                    6.5rem;
+            }
+
+
+            .hero-grid {
+
+                gap:
+                    6rem;
+            }
+        }
+
+
+        /* =========================================================
+           16. REDUCED MOTION
+        ========================================================= */
+
+        @media (prefers-reduced-motion: reduce) {
+
+            html {
+                scroll-behavior:
+                    auto;
+            }
+
+            *,
+            *::before,
+            *::after {
+
+                animation-duration:
+                    .01ms !important;
+
+                animation-iteration-count:
+                    1 !important;
+
+                transition-duration:
+                    .01ms !important;
+            }
+        }
+
+
+        /* =========================================================
+           17. PRINT
+        ========================================================= */
+
+        @media print {
+
+            .site-header,
+            .theme-button,
+            .hero-actions {
+                display:
+                    none;
+            }
+
+            body {
+                color:
+                    #000;
+
+                background:
+                    #fff;
+            }
+
+            .section {
+                padding:
+                    2rem 0;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+    <!-- ACCESSIBILITY -->
+
+    <a class="skip-link" href="#main">
+        Skip to main content
+    </a>
+
+
+    <!-- HEADER -->
+
+    <header class="site-header">
+
+        <div class="container header-inner">
+
+            <a class="logo"
+               href="#home"
+               aria-label="Abhishek Maurya home">
+
+                <span class="logo-mark"
+                      aria-hidden="true">
+                    AM
+                </span>
+
+                <span>
+                    Abhishek Maurya
+                </span>
+
+            </a>
+
+
+            <nav class="nav"
+                 aria-label="Main navigation">
+
+                <a href="#home"
+                   aria-current="page">
+                    Home
+                </a>
+
+                <a href="#about">
+                    About
+                </a>
+
+                <a href="#skills">
+                    Skills
+                </a>
+
+                <a href="#projects">
+                    Projects
+                </a>
+
+                <a href="#contact">
+                    Contact
+                </a>
+
+            </nav>
+
+
+            <button
+                class="theme-button"
+                id="themeToggle"
+                type="button"
+                aria-label="Switch color theme"
+                title="Switch color theme">
+
+                <span id="themeIcon"
+                      aria-hidden="true">
+                    ☀
+                </span>
+
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- MAIN -->
+
+    <main id="main">
+
+
+        <!-- HERO -->
+
+        <section class="hero"
+                 id="home"
+                 aria-labelledby="hero-title">
+
+            <div class="container hero-grid">
+
+
+                <div class="hero-content">
+
+                    <div class="badge">
+
+                        <span class="badge-dot"
+                              aria-hidden="true">
+                        </span>
+
+                        B.Tech CSE • AI & ML
+
+                    </div>
+
+
+                    <h1 id="hero-title">
+
+                        Building the
+                        <span class="gradient-text">
+                            future
+                        </span>
+                        with technology.
+
+                    </h1>
+
+
+                    <p class="hero-description">
+
+                        I'm <strong>Abhishek Maurya</strong>,
+                        a B.Tech Computer Science and Engineering
+                        student specializing in Artificial Intelligence
+                        and Machine Learning.
+
+                        I love programming, solving problems,
+                        exploring AI/ML, and building modern
+                        digital experiences.
+
+                    </p>
+
+
+                    <div class="hero-actions">
+
+                        <a class="button button-primary"
+                           href="#projects">
+
+                            Explore Projects
+                            <span aria-hidden="true">
+                                →
+                            </span>
+
+                        </a>
+
+
+                        <a class="button button-outline"
+                           href="#contact">
+
+                            Let's Connect
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PROFILE VISUAL -->
+
+                <div class="hero-visual"
+                     aria-label="Abhishek Maurya profile">
+
+                    <div class="orbit"
+                         aria-hidden="true">
+                    </div>
+
+
+                    <div class="profile-card">
+
+                        <div class="profile-avatar"
+                             role="img"
+                             aria-label="Abhishek Maurya initials">
+                            AM
+                        </div>
+
+                        <h2>
+                            Abhishek Maurya
+                        </h2>
+
+                        <p>
+                            Computer Science & Engineering
+                        </p>
+
+                        <p>
+                            Artificial Intelligence & Machine Learning
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ABOUT -->
+
+        <section class="section"
+                 id="about"
+                 aria-labelledby="about-title">
+
+            <div class="container">
+
+                <header class="section-header">
+
+                    <p class="section-label">
+                        About Me
+                    </p>
+
+                    <h2 class="section-title"
+                        id="about-title">
+
+                        Computer Science
+                        <span class="gradient-text">
+                            & AI/ML
+                        </span>
+
+                    </h2>
+
+                    <p class="section-description">
+
+                        My academic journey combines core
+                        computer science with emerging
+                        artificial intelligence and machine
+                        learning technologies.
+
+                    </p>
+
+                </header>
+
+
+                <div class="about-grid">
+
+
+                    <article class="glass-card about-text">
+
+                        <h3>
+                            Who I Am
+                        </h3>
+
+                        <p>
+
+                            I am Abhishek Maurya, pursuing
+                            a Bachelor of Technology in
+                            Computer Science and Engineering
+                            with a specialization in Artificial
+                            Intelligence and Machine Learning.
+
+                        </p>
+
+                        <p>
+
+                            My interests include programming,
+                            data structures and algorithms,
+                            software development, artificial
+                            intelligence, machine learning,
+                            databases, and modern web technologies.
+
+                        </p>
+
+                        <p>
+
+                            I believe in learning by building.
+                            Every project gives me an opportunity
+                            to strengthen my technical knowledge,
+                            improve my problem-solving ability,
+                            and understand how technology can
+                            solve real-world problems.
+
+                        </p>
+
+                    </article>
+
+
+                    <aside class="glass-card">
+
+                        <h3>
+                            Education
+                        </h3>
+
+
+                        <div class="education-list">
+
+
+                            <div class="education-item">
+
+                                <div class="education-icon"
+                                     aria-hidden="true">
+                                    🎓
+                                </div>
+
+                                <div>
+
+                                    <strong>
+                                        Bachelor of Technology
+                                    </strong>
+
+                                    <span>
+                                        Computer Science & Engineering
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="education-item">
+
+                                <div class="education-icon"
+                                     aria-hidden="true">
+                                    🤖
+                                </div>
+
+                                <div>
+
+                                    <strong>
+                                        Specialization
+                                    </strong>
+
+                                    <span>
+                                        Artificial Intelligence
+                                        & Machine Learning
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="education-item">
+
+                                <div class="education-icon"
+                                     aria-hidden="true">
+                                    💻
+                                </div>
+
+                                <div>
+
+                                    <strong>
+                                        Core Focus
+                                    </strong>
+
+                                    <span>
+                                        Programming, Algorithms,
+                                        AI, ML & Software Development
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+                    </aside>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SKILLS -->
+
+        <section class="section"
+                 id="skills"
+                 aria-labelledby="skills-title">
+
+            <div class="container">
+
+                <header class="section-header">
+
+                    <p class="section-label">
+                        Technical Stack
+                    </p>
+
+                    <h2 class="section-title"
+                        id="skills-title">
+
+                        Skills &
+                        <span class="gradient-text">
+                            Expertise
+                        </span>
+
+                    </h2>
+
+                    <p class="section-description">
+
+                        Technologies and concepts I am learning
+                        and applying throughout my B.Tech CSE
+                        AI & ML journey.
+
+                    </p>
+
+                </header>
+
+
+                <div class="skills-grid">
+
+
+                    <article class="glass-card skill-card">
+
+                        <div>
+
+                            <div class="skill-top">
+
+                                <div class="skill-icon"
+                                     aria-hidden="true">
+                                    &lt;/&gt;
+                                </div>
+
+                                <span class="skill-number">
+                                    01
+                                </span>
+
+                            </div>
+
+                            <h3>
+                                Programming
+                            </h3>
+
+                            <p>
+                                Building strong programming
+                                and problem-solving fundamentals.
+                            </p>
+
+                        </div>
+
+
+                        <div class="skill-tags">
+
+                            <span>C</span>
+                            <span>C++</span>
+                            <span>Python</span>
+                            <span>Java</span>
+                            <span>JavaScript</span>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="glass-card skill-card">
+
+                        <div>
+
+                            <div class="skill-top">
+
+                                <div class="skill-icon"
+                                     aria-hidden="true">
+                                    🌐
+                                </div>
+
+                                <span class="skill-number">
+                                    02
+                                </span>
+
+                            </div>
+
+                            <h3>
+                                Web Development
+                            </h3>
+
+                            <p>
+                                Creating responsive and
+                                accessible modern websites.
+                            </p>
+
+                        </div>
+
+
+                        <div class="skill-tags">
+
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                            <span>Responsive UI</span>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="glass-card skill-card">
+
+                        <div>
+
+                            <div class="skill-top">
+
+                                <div class="skill-icon"
+                                     aria-hidden="true">
+                                    🧠
+                                </div>
+
+                                <span class="skill-number">
+                                    03
+                                </span>
+
+                            </div>
+
+                            <h3>
+                                Artificial Intelligence
+                            </h3>
+
+                            <p>
+                                Exploring intelligent systems
+                                and AI problem-solving techniques.
+                            </p>
+
+                        </div>
+
+
+                        <div class="skill-tags">
+
+                            <span>AI</span>
+                            <span>Search</span>
+                            <span>Automation</span>
+                            <span>Intelligent Systems</span>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="glass-card skill-card">
+
+                        <div>
+
+                            <div class="skill-top">
+
+                                <div class="skill-icon"
+                                     aria-hidden="true">
+                                    📊
+                                </div>
+
+                                <span class="skill-number">
+                                    04
+                                </span>
+
+                            </div>
+
+                            <h3>
+                                Machine Learning
+                            </h3>
+
+                            <p>
+                                Learning data-driven modeling,
+                                prediction, and evaluation.
+                            </p>
+
+                        </div>
+
+
+                        <div class="skill-tags">
+
+                            <span>Python</span>
+                            <span>ML</span>
+                            <span>Data</span>
+                            <span>Prediction</span>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="glass-card skill-card">
+
+                        <div>
+
+                            <div class="skill-top">
+
+                                <div class="skill-icon"
+                                     aria-hidden="true">
+                                    ⚙
+                                </div>
+
+                                <span class="skill-number">
+                                    05
+                                </span>
+
+                            </div>
+
+                            <h3>
+                                Computer Science
+                            </h3>
+
+                            <p>
+                                Core concepts required for
+                                software engineering and CSE.
+                            </p>
+
+                        </div>
+
+
+                        <div class="skill-tags">
+
+                            <span>DSA</span>
+                            <span>DBMS</span>
+                            <span>OS</span>
+                            <span>Networks</span>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="glass-card skill-card">
+
+                        <div>
+
+                            <div class="skill-top">
+
+                                <div class="skill-icon"
+                                     aria-hidden="true">
+                                    🛠
+                                </div>
+
+                                <span class="skill-number">
+                                    06
+                                </span>
+
+                            </div>
+
+                            <h3>
+                                Developer Tools
+                            </h3>
+
+                            <p>
+                                Tools used for development,
+                                version control, and experimentation.
+                            </p>
+
+                        </div>
+
+
+                        <div class="skill-tags">
+
+                            <span>Git</span>
+                            <span>GitHub</span>
+                            <span>VS Code</span>
+                            <span>Jupyter</span>
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PROJECTS -->
+
+        <section class="section"
+                 id="projects"
+                 aria-labelledby="projects-title">
+
+            <div class="container">
+
+                <header class="section-header">
+
+                    <p class="section-label">
+                        Selected Work
+                    </p>
+
+                    <h2 class="section-title"
+                        id="projects-title">
+
+                        Featured
+                        <span class="gradient-text">
+                            Projects
+                        </span>
+
+                    </h2>
+
+                    <p class="section-description">
+
+                        Projects combining programming,
+                        computer science, artificial
+                        intelligence, machine learning,
+                        and web development.
+
+                    </p>
+
+                </header>
+
+
+                <div class="projects-grid">
+
+
+                    <article class="glass-card project-card">
+
+                        <div>
+
+                            <span class="project-number">
+                                PROJECT 01
+                            </span>
+
+                            <h3>
+                                Student Performance Prediction
+                            </h3>
+
+                            <p>
+
+                                A machine learning project
+                                that analyzes student data
+                                and predicts academic
+                                performance.
+
+                            </p>
+
+                        </div>
+
+
+                        <div class="project-footer">
+
+                            <div class="skill-tags">
+
+                                <span>Python</span>
+                                <span>ML</span>
+
+                            </div>
+
+                            <a class="project-link"
+                               href="#contact">
+
+                                Discuss →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="glass-card project-card">
+
+                        <div>
+
+                            <span class="project-number">
+                                PROJECT 02
+                            </span>
+
+                            <h3>
+                                AI Recommendation System
+                            </h3>
+
+                            <p>
+
+                                An AI concept demonstrating
+                                personalized recommendations
+                                using intelligent algorithms.
+
+                            </p>
+
+                        </div>
+
+
+                        <div class="project-footer">
+
+                            <div class="skill-tags">
+
+                                <span>AI</span>
+                                <span>Python</span>
+
+                            </div>
+
+                            <a class="project-link"
+                               href="#contact">
+
+                                Discuss →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="glass-card project-card">
+
+                        <div>
+
+                            <span class="project-number">
+                                PROJECT 03
+                            </span>
+
+                            <h3>
+                                Accessible Portfolio
+                            </h3>
+
+                            <p>
+
+                                A responsive portfolio designed
+                                around semantic HTML5, WCAG,
+                                keyboard accessibility, and
+                                modern CSS architecture.
+
+                            </p>
+
+                        </div>
+
+
+                        <div class="project-footer">
+
+                            <div class="skill-tags">
+
+                                <span>HTML5</span>
+                                <span>CSS3</span>
+
+                            </div>
+
+                            <a class="project-link"
+                               href="#contact">
+
+                                Discuss →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="glass-card project-card">
+
+                        <div>
+
+                            <span class="project-number">
+                                PROJECT 04
+                            </span>
+
+                            <h3>
+                                Student Management System
+                            </h3>
+
+                            <p>
+
+                                A database-oriented application
+                                for managing student records
+                                and academic information.
+
+                            </p>
+
+                        </div>
+
+
+                        <div class="project-footer">
+
+                            <div class="skill-tags">
+
+                                <span>SQL</span>
+                                <span>DBMS</span>
+
+                            </div>
+
+                            <a class="project-link"
+                               href="#contact">
+
+                                Discuss →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONTACT -->
+
+        <section class="section"
+                 id="contact"
+                 aria-labelledby="contact-title">
+
+            <div class="container">
+
+                <header class="section-header">
+
+                    <p class="section-label">
+                        Contact
+                    </p>
+
+                    <h2 class="section-title"
+                        id="contact-title">
+
+                        Let's build something
+                        <span class="gradient-text">
+                            meaningful.
+                        </span>
+
+                    </h2>
+
+                    <p class="section-description">
+
+                        Have a project idea, internship
+                        opportunity, collaboration, or
+                        simply want to connect?
+
+                    </p>
+
+                </header>
+
+
+                <div class="contact-grid">
+
+
+                    <aside class="glass-card contact-info"
+                           aria-label="Contact information">
+
+
+                        <div class="contact-item">
+
+                            <div class="contact-icon"
+                                 aria-hidden="true">
+                                ✉
+                            </div>
+
+                            <div>
+
+                                <small>
+                                    Email
+                                </small>
+
+                                <a href="mailto:your-email@example.com">
+                                    your-email@example.com
+                                </a>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="contact-item">
+
+                            <div class="contact-icon"
+                                 aria-hidden="true">
+                                🎓
+                            </div>
+
+                            <div>
+
+                                <small>
+                                    Degree
+                                </small>
+
+                                <strong>
+                                    B.Tech CSE — AI & ML
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="contact-item">
+
+                            <div class="contact-icon"
+                                 aria-hidden="true">
+                                💻
+                            </div>
+
+                            <div>
+
+                                <small>
+                                    Focus
+                                </small>
+
+                                <strong>
+                                    AI, ML & Software Development
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                    </aside>
+
+
+                    <div class="glass-card">
+
+                        <form
+                            class="contact-form"
+                            id="contactForm"
+                            action="#"
+                            method="post"
+                            aria-describedby="formHelp">
+
+                            <p id="formHelp"
+                               class="section-description">
+
+                                Fields marked with
+                                <span aria-hidden="true">*</span>
+                                are required.
+
+                            </p>
+
+
+                            <div class="form-group">
+
+                                <label for="name">
+                                    Name
+                                    <span aria-hidden="true">*</span>
+                                </label>
+
+                                <input
+                                    id="name"
+                                    name="name"
+                                    type="text"
+                                    autocomplete="name"
+                                    required
+                                    minlength="2"
+                                    placeholder="Your name">
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="email">
+                                    Email
+                                    <span aria-hidden="true">*</span>
+                                </label>
+
+                                <input
+                                    id="email"
+                                    name="email"
+                                    type="email"
+                                    autocomplete="email"
+                                    required
+                                    placeholder="your@email.com">
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="message">
+                                    Message
+                                    <span aria-hidden="true">*</span>
+                                </label>
+
+                                <textarea
+                                    id="message"
+                                    name="message"
+                                    required
+                                    minlength="10"
+                                    placeholder="Tell me about your project..."></textarea>
+
+                            </div>
+
+
+                            <button
+                                class="button button-primary"
+                                type="submit">
+
+                                Send Message
+                                <span aria-hidden="true">
+                                    →
+                                </span>
+
+                            </button>
+
+
+                            <p
+                                class="form-status"
+                                id="formStatus"
+                                role="status"
+                                aria-live="polite">
+                            </p>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        <div class="container footer-inner">
+
+            <p>
+                © 2026 Abhishek Maurya.
+                B.Tech CSE — AI & ML.
+            </p>
+
+            <p>
+                Built with HTML5 & CSS3.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+        /* =====================================================
+           DARK / LIGHT THEME
+        ===================================================== */
+
+        const html =
+            document.documentElement;
+
+        const themeToggle =
+            document.getElementById("themeToggle");
+
+        const themeIcon =
+            document.getElementById("themeIcon");
+
+
+        function setTheme(theme) {
+
+            html.setAttribute(
+                "data-theme",
+                theme
+            );
+
+            localStorage.setItem(
+                "portfolio-theme",
+                theme
+            );
+
+
+            if (theme === "dark") {
+
+                themeIcon.textContent = "☀";
+
+                themeToggle.setAttribute(
+                    "aria-label",
+                    "Switch to light theme"
+                );
+
+            } else {
+
+                themeIcon.textContent = "☾";
+
+                themeToggle.setAttribute(
+                    "aria-label",
+                    "Switch to dark theme"
+                );
+
+            }
+
+        }
+
+
+        const savedTheme =
+            localStorage.getItem(
+                "portfolio-theme"
+            );
+
+
+        if (savedTheme) {
+
+            setTheme(savedTheme);
+
+        } else {
+
+            const prefersDark =
+                window.matchMedia(
+                    "(prefers-color-scheme: dark)"
+                ).matches;
+
+            setTheme(
+                prefersDark
+                    ? "dark"
+                    : "light"
+            );
+
+        }
+
+
+        themeToggle.addEventListener(
+            "click",
+            () => {
+
+                const current =
+                    html.getAttribute(
+                        "data-theme"
+                    );
+
+                setTheme(
+                    current === "dark"
+                        ? "light"
+                        : "dark"
+                );
+
+            }
+        );
+
+
+        /* =====================================================
+           CONTACT FORM
+        ===================================================== */
+
+        const form =
+            document.getElementById(
+                "contactForm"
+            );
+
+        const status =
+            document.getElementById(
+                "formStatus"
+            );
+
+
+        form.addEventListener(
+            "submit",
+            function (event) {
+
+                event.preventDefault();
+
+
+                if (!form.checkValidity()) {
+
+                    form.reportValidity();
+
+                    return;
+
+                }
+
+
+                status.textContent =
+                    "Thank you! Your message has been received.";
+
+                form.reset();
+
+            }
+        );
+
+
+        /* =====================================================
+           ACTIVE NAVIGATION
+        ===================================================== */
+
+        const sections =
+            document.querySelectorAll(
+                "main section[id]"
+            );
+
+        const navLinks =
+            document.querySelectorAll(
+                ".nav a"
+            );
+
+
+        const observer =
+            new IntersectionObserver(
+                (entries) => {
+
+                    entries.forEach(
+                        (entry) => {
+
+                            if (
+                                entry.isIntersecting
+                            ) {
+
+                                navLinks.forEach(
+                                    (link) => {
+
+                                        link.removeAttribute(
+                                            "aria-current"
+                                        );
+
+                                    }
+                                );
+
+
+                                const active =
+                                    document.querySelector(
+                                        `.nav a[href="#${entry.target.id}"]`
+                                    );
+
+
+                                if (active) {
+
+                                    active.setAttribute(
+                                        "aria-current",
+                                        "page"
+                                    );
+
+                                }
+
+                            }
+
+                        }
+                    );
+
+                },
+                {
+                    rootMargin:
+                        "-35% 0px -55% 0px"
+                }
+            );
+
+
+        sections.forEach(
+            (section) => {
+
+                observer.observe(section);
+
+            }
+        );
+
+    </script>
+
+</body>
+
+</html>
