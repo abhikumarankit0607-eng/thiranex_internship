@@ -1,0 +1,2053 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Abhishek Maurya - B.Tech Computer Science and Engineering student specializing in Artificial Intelligence and Machine Learning. Explore skills, projects, education and contact information.">
+
+    <meta name="keywords"
+          content="Abhishek Maurya, BTech CSE, Computer Science Engineering, Artificial Intelligence, Machine Learning, AI ML, Python, Java, Web Development, Portfolio">
+
+    <meta name="author" content="Abhishek Maurya">
+
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:title"
+          content="Abhishek Maurya | B.Tech CSE AI & ML">
+
+    <meta property="og:description"
+          content="Portfolio of Abhishek Maurya, B.Tech CSE student specializing in Artificial Intelligence and Machine Learning.">
+
+    <meta property="og:type" content="website">
+
+    <title>
+        Abhishek Maurya | B.Tech CSE AI & ML Portfolio
+    </title>
+
+    <style>
+
+        /* =========================================
+           GLOBAL STYLES
+        ========================================= */
+
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary: #0f172a;
+            --text: #172033;
+            --muted: #526075;
+            --background: #ffffff;
+            --surface: #f1f5f9;
+            --border: #d7dee8;
+            --success: #15803d;
+            --focus: #f59e0b;
+            --max-width: 1150px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family:
+                system-ui,
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                sans-serif;
+
+            color: var(--text);
+            background: var(--background);
+            line-height: 1.6;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        a {
+            color: var(--primary-dark);
+        }
+
+        a:hover {
+            text-decoration-thickness: 2px;
+        }
+
+        button,
+        input,
+        textarea {
+            font: inherit;
+        }
+
+        .container {
+            width: min(92%, var(--max-width));
+            margin-inline: auto;
+        }
+
+        /* =========================================
+           ACCESSIBILITY
+        ========================================= */
+
+        .skip-link {
+            position: absolute;
+            top: -100px;
+            left: 20px;
+            z-index: 9999;
+
+            background: #000;
+            color: #fff;
+
+            padding: 12px 18px;
+            border-radius: 5px;
+
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        .skip-link:focus {
+            top: 20px;
+        }
+
+        :focus-visible {
+            outline: 4px solid var(--focus);
+            outline-offset: 3px;
+        }
+
+        /* =========================================
+           HEADER
+        ========================================= */
+
+        header {
+            background: #ffffff;
+            border-bottom: 1px solid var(--border);
+
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            min-height: 75px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 25px;
+        }
+
+        .logo {
+            color: var(--secondary);
+            text-decoration: none;
+
+            font-size: 1.35rem;
+            font-weight: 800;
+        }
+
+        nav ul {
+            display: flex;
+            flex-wrap: wrap;
+
+            gap: 8px;
+
+            list-style: none;
+        }
+
+        nav a {
+            display: block;
+
+            padding: 9px 12px;
+
+            color: var(--secondary);
+            text-decoration: none;
+
+            font-weight: 600;
+
+            border-radius: 5px;
+        }
+
+        nav a:hover {
+            background: #eff6ff;
+            color: var(--primary-dark);
+        }
+
+        nav a[aria-current="page"] {
+            color: var(--primary-dark);
+
+            text-decoration: underline;
+            text-decoration-thickness: 3px;
+            text-underline-offset: 5px;
+        }
+
+        /* =========================================
+           HERO
+        ========================================= */
+
+        .hero {
+            min-height: 650px;
+
+            display: flex;
+            align-items: center;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #eff6ff 0%,
+                    #ffffff 50%,
+                    #eef2ff 100%
+                );
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+
+            gap: 60px;
+            align-items: center;
+        }
+
+        .eyebrow {
+            color: var(--primary-dark);
+
+            font-size: 0.85rem;
+            font-weight: 800;
+
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+
+            margin-bottom: 12px;
+        }
+
+        h1 {
+            font-size: clamp(2.7rem, 7vw, 5rem);
+            line-height: 1.05;
+
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            line-height: 1.2;
+
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            font-size: 1.35rem;
+            margin-bottom: 12px;
+        }
+
+        .hero-description {
+            max-width: 750px;
+
+            color: var(--muted);
+
+            font-size: 1.15rem;
+        }
+
+        .button-group {
+            display: flex;
+            flex-wrap: wrap;
+
+            gap: 15px;
+
+            margin-top: 30px;
+        }
+
+        .button {
+            display: inline-block;
+
+            padding: 12px 20px;
+
+            border: 2px solid var(--primary);
+            border-radius: 7px;
+
+            background: var(--primary);
+            color: #fff;
+
+            text-decoration: none;
+            font-weight: 700;
+
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background: var(--primary-dark);
+            border-color: var(--primary-dark);
+        }
+
+        .button-secondary {
+            background: #fff;
+            color: var(--primary-dark);
+        }
+
+        /* =========================================
+           PROFILE CARD
+        ========================================= */
+
+        .profile-card {
+            padding: 30px;
+
+            background: #fff;
+
+            border: 1px solid var(--border);
+            border-radius: 20px;
+
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+
+            text-align: center;
+        }
+
+        .profile-image {
+            width: 150px;
+            height: 150px;
+
+            margin: 0 auto 20px;
+
+            display: grid;
+            place-items: center;
+
+            border-radius: 50%;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #2563eb,
+                    #7c3aed
+                );
+
+            color: #fff;
+
+            font-size: 3rem;
+            font-weight: 800;
+        }
+
+        .profile-card h2 {
+            font-size: 1.5rem;
+            margin-bottom: 8px;
+        }
+
+        .profile-card p {
+            color: var(--muted);
+        }
+
+        /* =========================================
+           SECTIONS
+        ========================================= */
+
+        section {
+            scroll-margin-top: 90px;
+        }
+
+        .section {
+            padding: 90px 0;
+        }
+
+        .section-alt {
+            background: var(--surface);
+        }
+
+        .section-header {
+            max-width: 750px;
+            margin-bottom: 40px;
+        }
+
+        .section-header p {
+            color: var(--muted);
+        }
+
+        /* =========================================
+           ABOUT
+        ========================================= */
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+
+            gap: 40px;
+            align-items: start;
+        }
+
+        .about-text p {
+            margin-bottom: 18px;
+            color: var(--muted);
+        }
+
+        .education-card {
+            padding: 30px;
+
+            background: #fff;
+
+            border: 1px solid var(--border);
+            border-radius: 15px;
+        }
+
+        .education-card dl {
+            margin-top: 20px;
+        }
+
+        .education-card dt {
+            font-weight: 800;
+            margin-top: 15px;
+        }
+
+        .education-card dd {
+            color: var(--muted);
+        }
+
+        /* =========================================
+           CARDS
+        ========================================= */
+
+        .cards {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 25px;
+        }
+
+        .card {
+            padding: 30px;
+
+            background: #fff;
+
+            border: 1px solid var(--border);
+            border-radius: 15px;
+
+            box-shadow:
+                0 8px 25px
+                rgba(0, 0, 0, 0.04);
+        }
+
+        .card p {
+            color: var(--muted);
+        }
+
+        /* =========================================
+           SKILLS
+        ========================================= */
+
+        .skills-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 25px;
+        }
+
+        .skill-card {
+            padding: 30px;
+
+            background: #fff;
+
+            border: 1px solid var(--border);
+            border-radius: 15px;
+        }
+
+        .skill-card ul {
+            padding-left: 20px;
+        }
+
+        .skill-card li {
+            margin-bottom: 8px;
+        }
+
+        /* =========================================
+           PROJECTS
+        ========================================= */
+
+        .projects-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 25px;
+        }
+
+        .project-card {
+            padding: 30px;
+
+            background: #fff;
+
+            border: 1px solid var(--border);
+            border-radius: 15px;
+
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-card p {
+            color: var(--muted);
+        }
+
+        .project-type {
+            color: var(--primary-dark) !important;
+
+            font-size: 0.85rem;
+            font-weight: 800;
+
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+
+            margin-bottom: 8px;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+
+            gap: 8px;
+
+            list-style: none;
+
+            margin-top: 20px;
+        }
+
+        .tags li {
+            padding: 5px 10px;
+
+            background: #dbeafe;
+            color: #1e3a8a;
+
+            border-radius: 999px;
+
+            font-size: 0.85rem;
+            font-weight: 700;
+        }
+
+        /* =========================================
+           CONTACT
+        ========================================= */
+
+        .contact-grid {
+            display: grid;
+
+            grid-template-columns: 1fr 2fr;
+
+            gap: 40px;
+
+            align-items: start;
+        }
+
+        .contact-info {
+            padding: 30px;
+
+            background: #eff6ff;
+
+            border-radius: 15px;
+        }
+
+        address {
+            font-style: normal;
+        }
+
+        .contact-info p {
+            margin-bottom: 20px;
+        }
+
+        .contact-info strong {
+            color: var(--secondary);
+        }
+
+        .contact-form {
+            padding: 35px;
+
+            background: #fff;
+
+            border: 1px solid var(--border);
+
+            border-radius: 15px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+
+            margin-bottom: 7px;
+
+            font-weight: 700;
+        }
+
+        .required {
+            color: #b91c1c;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+
+            padding: 12px 14px;
+
+            border: 2px solid #94a3b8;
+
+            border-radius: 6px;
+
+            background: #fff;
+
+            color: var(--text);
+        }
+
+        input:focus,
+        textarea:focus {
+            border-color: var(--primary);
+        }
+
+        textarea {
+            min-height: 160px;
+            resize: vertical;
+        }
+
+        .form-help {
+            color: var(--muted);
+            font-size: 0.9rem;
+
+            margin-bottom: 25px;
+        }
+
+        .form-status {
+            min-height: 25px;
+
+            margin-top: 15px;
+
+            color: var(--success);
+
+            font-weight: 700;
+        }
+
+        /* =========================================
+           FOOTER
+        ========================================= */
+
+        footer {
+            padding: 35px 0;
+
+            background: #0f172a;
+
+            color: #fff;
+        }
+
+        .footer-container {
+            display: flex;
+
+            justify-content: space-between;
+            align-items: center;
+
+            gap: 30px;
+        }
+
+        footer p {
+            color: #cbd5e1;
+        }
+
+        footer nav a {
+            color: #fff;
+        }
+
+        /* =========================================
+           RESPONSIVE DESIGN
+        ========================================= */
+
+        @media (max-width: 900px) {
+
+            .hero-content,
+            .about-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cards,
+            .skills-grid,
+            .projects-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .profile-card {
+                max-width: 450px;
+                margin: auto;
+            }
+        }
+
+        @media (max-width: 650px) {
+
+            .header-container {
+                flex-direction: column;
+
+                align-items: flex-start;
+
+                padding: 15px 0;
+            }
+
+            nav ul {
+                gap: 3px;
+            }
+
+            nav a {
+                padding: 7px 8px;
+                font-size: 0.9rem;
+            }
+
+            .hero {
+                padding: 80px 0;
+            }
+
+            .section {
+                padding: 65px 0;
+            }
+
+            .cards,
+            .skills-grid,
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        /* =========================================
+           REDUCED MOTION
+        ========================================= */
+
+        @media (prefers-reduced-motion: reduce) {
+
+            html {
+                scroll-behavior: auto;
+            }
+
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- =========================================
+         ACCESSIBILITY SKIP LINK
+    ========================================== -->
+
+    <a class="skip-link" href="#main-content">
+        Skip to main content
+    </a>
+
+
+    <!-- =========================================
+         HEADER
+    ========================================== -->
+
+    <header id="home">
+
+        <div class="container header-container">
+
+            <a href="#home"
+               class="logo"
+               aria-label="Abhishek Maurya - Home">
+                Abhishek Maurya
+            </a>
+
+            <nav aria-label="Primary navigation">
+
+                <ul>
+
+                    <li>
+                        <a href="#home"
+                           aria-current="page">
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#about">
+                            About
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#skills">
+                            Skills
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#projects">
+                            Projects
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#contact">
+                            Contact
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================================
+         MAIN CONTENT
+    ========================================== -->
+
+    <main id="main-content">
+
+
+        <!-- =====================================
+             HERO SECTION
+        ====================================== -->
+
+        <section class="hero"
+                 aria-labelledby="hero-title">
+
+            <div class="container hero-content">
+
+                <div>
+
+                    <p class="eyebrow">
+                        B.Tech CSE — Artificial Intelligence & Machine Learning
+                    </p>
+
+                    <h1 id="hero-title">
+                        Hi, I'm Abhishek Maurya
+                    </h1>
+
+                    <p class="hero-description">
+                        I am a B.Tech Computer Science and Engineering
+                        student specializing in Artificial Intelligence
+                        and Machine Learning. I am passionate about
+                        programming, software development, data,
+                        artificial intelligence, and solving
+                        real-world problems with technology.
+                    </p>
+
+                    <div class="button-group">
+
+                        <a class="button"
+                           href="#projects">
+                            View My Projects
+                        </a>
+
+                        <a class="button button-secondary"
+                           href="#contact">
+                            Contact Me
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <aside class="profile-card"
+                       aria-label="Student profile">
+
+                    <div class="profile-image"
+                         role="img"
+                         aria-label="Abhishek Maurya profile initials">
+                        AM
+                    </div>
+
+                    <h2>
+                        Abhishek Maurya
+                    </h2>
+
+                    <p>
+                        B.Tech Computer Science & Engineering
+                    </p>
+
+                    <p>
+                        Artificial Intelligence & Machine Learning
+                    </p>
+
+                </aside>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             ABOUT SECTION
+        ====================================== -->
+
+        <section id="about"
+                 class="section"
+                 aria-labelledby="about-title">
+
+            <div class="container">
+
+                <header class="section-header">
+
+                    <p class="eyebrow">
+                        About Me
+                    </p>
+
+                    <h2 id="about-title">
+                        Computer Science Student & AI/ML Enthusiast
+                    </h2>
+
+                    <p>
+                        A technology-focused student building
+                        knowledge in computer science, artificial
+                        intelligence, machine learning, and software
+                        development.
+                    </p>
+
+                </header>
+
+
+                <div class="about-grid">
+
+                    <article class="about-text">
+
+                        <h3>
+                            Who I Am
+                        </h3>
+
+                        <p>
+                            I am Abhishek Maurya, pursuing a
+                            Bachelor of Technology in Computer
+                            Science and Engineering with a focus
+                            on Artificial Intelligence and
+                            Machine Learning.
+                        </p>
+
+                        <p>
+                            My B.Tech journey includes programming,
+                            data structures and algorithms,
+                            databases, operating systems,
+                            computer networks, artificial
+                            intelligence, machine learning,
+                            and web technologies.
+                        </p>
+
+                        <p>
+                            I enjoy creating projects that help
+                            me transform theoretical knowledge
+                            into practical solutions. I am
+                            continuously learning new technologies
+                            and improving my problem-solving skills.
+                        </p>
+
+                    </article>
+
+
+                    <aside class="education-card"
+                           aria-labelledby="education-title">
+
+                        <h3 id="education-title">
+                            Education
+                        </h3>
+
+                        <dl>
+
+                            <dt>
+                                Degree
+                            </dt>
+
+                            <dd>
+                                Bachelor of Technology
+                            </dd>
+
+
+                            <dt>
+                                Branch
+                            </dt>
+
+                            <dd>
+                                Computer Science & Engineering
+                            </dd>
+
+
+                            <dt>
+                                Specialization
+                            </dt>
+
+                            <dd>
+                                Artificial Intelligence & Machine Learning
+                            </dd>
+
+
+                            <dt>
+                                Academic Focus
+                            </dt>
+
+                            <dd>
+                                Programming, AI, ML, Data Structures,
+                                Algorithms & Software Development
+                            </dd>
+
+                        </dl>
+
+                    </aside>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             CSE FOCUS SECTION
+        ====================================== -->
+
+        <section class="section section-alt"
+                 aria-labelledby="focus-title">
+
+            <div class="container">
+
+                <header class="section-header">
+
+                    <p class="eyebrow">
+                        B.Tech CSE
+                    </p>
+
+                    <h2 id="focus-title">
+                        My Areas of Focus
+                    </h2>
+
+                </header>
+
+
+                <div class="cards">
+
+                    <article class="card">
+
+                        <h3>
+                            Computer Science
+                        </h3>
+
+                        <p>
+                            Strong interest in programming,
+                            data structures, algorithms,
+                            databases, operating systems,
+                            computer networks, and software
+                            engineering.
+                        </p>
+
+                    </article>
+
+
+                    <article class="card">
+
+                        <h3>
+                            Artificial Intelligence
+                        </h3>
+
+                        <p>
+                            Exploring intelligent systems,
+                            problem-solving techniques,
+                            AI concepts, automation, and
+                            intelligent applications.
+                        </p>
+
+                    </article>
+
+
+                    <article class="card">
+
+                        <h3>
+                            Machine Learning
+                        </h3>
+
+                        <p>
+                            Learning data preprocessing,
+                            supervised and unsupervised learning,
+                            model evaluation, prediction,
+                            and practical ML applications.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             SKILLS SECTION
+        ====================================== -->
+
+        <section id="skills"
+                 class="section"
+                 aria-labelledby="skills-title">
+
+            <div class="container">
+
+                <header class="section-header">
+
+                    <p class="eyebrow">
+                        Technical Skills
+                    </p>
+
+                    <h2 id="skills-title">
+                        My Skills
+                    </h2>
+
+                    <p>
+                        Technologies and concepts connected
+                        with my B.Tech CSE AI & ML studies.
+                    </p>
+
+                </header>
+
+
+                <div class="skills-grid">
+
+
+                    <article class="skill-card">
+
+                        <h3>
+                            Programming Languages
+                        </h3>
+
+                        <ul>
+
+                            <li>
+                                C
+                            </li>
+
+                            <li>
+                                C++
+                            </li>
+
+                            <li>
+                                Python
+                            </li>
+
+                            <li>
+                                Java
+                            </li>
+
+                            <li>
+                                JavaScript
+                            </li>
+
+                        </ul>
+
+                    </article>
+
+
+                    <article class="skill-card">
+
+                        <h3>
+                            Web Development
+                        </h3>
+
+                        <ul>
+
+                            <li>
+                                HTML5
+                            </li>
+
+                            <li>
+                                CSS3
+                            </li>
+
+                            <li>
+                                JavaScript
+                            </li>
+
+                            <li>
+                                Responsive Web Design
+                            </li>
+
+                            <li>
+                                Semantic HTML
+                            </li>
+
+                            <li>
+                                Web Accessibility
+                            </li>
+
+                        </ul>
+
+                    </article>
+
+
+                    <article class="skill-card">
+
+                        <h3>
+                            Computer Science
+                        </h3>
+
+                        <ul>
+
+                            <li>
+                                Data Structures
+                            </li>
+
+                            <li>
+                                Algorithms
+                            </li>
+
+                            <li>
+                                Object-Oriented Programming
+                            </li>
+
+                            <li>
+                                DBMS
+                            </li>
+
+                            <li>
+                                Operating Systems
+                            </li>
+
+                            <li>
+                                Computer Networks
+                            </li>
+
+                        </ul>
+
+                    </article>
+
+
+                    <article class="skill-card">
+
+                        <h3>
+                            Artificial Intelligence
+                        </h3>
+
+                        <ul>
+
+                            <li>
+                                AI Fundamentals
+                            </li>
+
+                            <li>
+                                Intelligent Systems
+                            </li>
+
+                            <li>
+                                Search Algorithms
+                            </li>
+
+                            <li>
+                                Problem Solving
+                            </li>
+
+                            <li>
+                                Automation
+                            </li>
+
+                        </ul>
+
+                    </article>
+
+
+                    <article class="skill-card">
+
+                        <h3>
+                            Machine Learning
+                        </h3>
+
+                        <ul>
+
+                            <li>
+                                Supervised Learning
+                            </li>
+
+                            <li>
+                                Unsupervised Learning
+                            </li>
+
+                            <li>
+                                Data Preprocessing
+                            </li>
+
+                            <li>
+                                Model Evaluation
+                            </li>
+
+                            <li>
+                                Predictive Modeling
+                            </li>
+
+                        </ul>
+
+                    </article>
+
+
+                    <article class="skill-card">
+
+                        <h3>
+                            Tools & Technologies
+                        </h3>
+
+                        <ul>
+
+                            <li>
+                                Git & GitHub
+                            </li>
+
+                            <li>
+                                VS Code
+                            </li>
+
+                            <li>
+                                Jupyter Notebook
+                            </li>
+
+                            <li>
+                                SQL
+                            </li>
+
+                            <li>
+                                Python Libraries
+                            </li>
+
+                        </ul>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             PROJECTS SECTION
+        ====================================== -->
+
+        <section id="projects"
+                 class="section section-alt"
+                 aria-labelledby="projects-title">
+
+            <div class="container">
+
+                <header class="section-header">
+
+                    <p class="eyebrow">
+                        Portfolio
+                    </p>
+
+                    <h2 id="projects-title">
+                        My Projects
+                    </h2>
+
+                    <p>
+                        Academic and personal projects related
+                        to Computer Science, AI, ML and Web
+                        Development.
+                    </p>
+
+                </header>
+
+
+                <div class="projects-grid">
+
+
+                    <article class="project-card">
+
+                        <header>
+
+                            <p class="project-type">
+                                Machine Learning
+                            </p>
+
+                            <h3>
+                                Student Performance Prediction
+                            </h3>
+
+                        </header>
+
+                        <p>
+                            A machine learning project that
+                            analyzes student-related data and
+                            predicts academic performance using
+                            machine learning techniques.
+                        </p>
+
+                        <ul class="tags">
+
+                            <li>
+                                Python
+                            </li>
+
+                            <li>
+                                Machine Learning
+                            </li>
+
+                            <li>
+                                Data Analysis
+                            </li>
+
+                        </ul>
+
+                    </article>
+
+
+                    <article class="project-card">
+
+                        <header>
+
+                            <p class="project-type">
+                                Artificial Intelligence
+                            </p>
+
+                            <h3>
+                                AI Recommendation System
+                            </h3>
+
+                        </header>
+
+                        <p>
+                            An AI-based recommendation concept
+                            that demonstrates how intelligent
+                            systems can provide personalized
+                            recommendations.
+                        </p>
+
+                        <ul class="tags">
+
+                            <li>
+                                Python
+                            </li>
+
+                            <li>
+                                AI
+                            </li>
+
+                            <li>
+                                Algorithms
+                            </li>
+
+                        </ul>
+
+                    </article>
+
+
+                    <article class="project-card">
+
+                        <header>
+
+                            <p class="project-type">
+                                Web Development
+                            </p>
+
+                            <h3>
+                                Accessible Portfolio Website
+                            </h3>
+
+                        </header>
+
+                        <p>
+                            A semantic HTML5 portfolio designed
+                            with accessibility, SEO, responsive
+                            design, keyboard navigation, and
+                            screen-reader support.
+                        </p>
+
+                        <ul class="tags">
+
+                            <li>
+                                HTML5
+                            </li>
+
+                            <li>
+                                CSS3
+                            </li>
+
+                            <li>
+                                JavaScript
+                            </li>
+
+                            <li>
+                                WCAG
+                            </li>
+
+                        </ul>
+
+                    </article>
+
+
+                    <article class="project-card">
+
+                        <header>
+
+                            <p class="project-type">
+                                Python
+                            </p>
+
+                            <h3>
+                                Python Automation Project
+                            </h3>
+
+                        </header>
+
+                        <p>
+                            A Python-based automation project
+                            created to simplify repetitive
+                            tasks and demonstrate programming
+                            and problem-solving skills.
+                        </p>
+
+                        <ul class="tags">
+
+                            <li>
+                                Python
+                            </li>
+
+                            <li>
+                                Automation
+                            </li>
+
+                            <li>
+                                Programming
+                            </li>
+
+                        </ul>
+
+                    </article>
+
+
+                    <article class="project-card">
+
+                        <header>
+
+                            <p class="project-type">
+                                Database
+                            </p>
+
+                            <h3>
+                                Student Management System
+                            </h3>
+
+                        </header>
+
+                        <p>
+                            A database-oriented project for
+                            managing student information,
+                            records, and academic data.
+                        </p>
+
+                        <ul class="tags">
+
+                            <li>
+                                SQL
+                            </li>
+
+                            <li>
+                                DBMS
+                            </li>
+
+                            <li>
+                                Python
+                            </li>
+
+                        </ul>
+
+                    </article>
+
+
+                    <article class="project-card">
+
+                        <header>
+
+                            <p class="project-type">
+                                CSE Project
+                            </p>
+
+                            <h3>
+                                Algorithm Visualizer
+                            </h3>
+
+                        </header>
+
+                        <p>
+                            An educational project that helps
+                            users understand sorting and searching
+                            algorithms through visual representation.
+                        </p>
+
+                        <ul class="tags">
+
+                            <li>
+                                C++
+                            </li>
+
+                            <li>
+                                Algorithms
+                            </li>
+
+                            <li>
+                                Data Structures
+                            </li>
+
+                        </ul>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             CONTACT SECTION
+        ====================================== -->
+
+        <section id="contact"
+                 class="section"
+                 aria-labelledby="contact-title">
+
+            <div class="container">
+
+                <header class="section-header">
+
+                    <p class="eyebrow">
+                        Get In Touch
+                    </p>
+
+                    <h2 id="contact-title">
+                        Contact Me
+                    </h2>
+
+                    <p>
+                        Interested in discussing a project,
+                        internship, collaboration, or
+                        technology? Send me a message.
+                    </p>
+
+                </header>
+
+
+                <div class="contact-grid">
+
+
+                    <aside class="contact-info"
+                           aria-labelledby="contact-info-title">
+
+                        <h3 id="contact-info-title">
+                            Contact Information
+                        </h3>
+
+                        <address>
+
+                            <p>
+                                <strong>
+                                    Name
+                                </strong>
+                                <br>
+                                Abhishek Maurya
+                            </p>
+
+                            <p>
+                                <strong>
+                                    Degree
+                                </strong>
+                                <br>
+                                B.Tech CSE — AI & ML
+                            </p>
+
+                            <p>
+                                <strong>
+                                    Email
+                                </strong>
+                                <br>
+
+                                <a href="mailto:your-email@example.com">
+                                    your-email@example.com
+                                </a>
+                            </p>
+
+                            <p>
+                                <strong>
+                                    Area
+                                </strong>
+                                <br>
+                                Computer Science,
+                                Artificial Intelligence &
+                                Machine Learning
+                            </p>
+
+                        </address>
+
+                    </aside>
+
+
+                    <!-- Accessible Contact Form -->
+
+                    <div class="contact-form">
+
+                        <h3>
+                            Send Me a Message
+                        </h3>
+
+                        <p class="form-help"
+                           id="form-instructions">
+
+                            Fields marked with
+                            <span class="required"
+                                  aria-hidden="true">
+                                *
+                            </span>
+                            are required.
+
+                        </p>
+
+
+                        <form id="contactForm"
+                              action="#"
+                              method="post"
+                              aria-describedby="form-instructions">
+
+
+                            <!-- NAME -->
+
+                            <div class="form-group">
+
+                                <label for="name">
+
+                                    Name
+
+                                    <span class="required"
+                                          aria-hidden="true">
+                                        *
+                                    </span>
+
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="name"
+                                    name="name"
+                                    autocomplete="name"
+                                    required
+                                    aria-required="true"
+                                    minlength="2"
+                                    placeholder="Enter your name">
+
+                            </div>
+
+
+                            <!-- EMAIL -->
+
+                            <div class="form-group">
+
+                                <label for="email">
+
+                                    Email Address
+
+                                    <span class="required"
+                                          aria-hidden="true">
+                                        *
+                                    </span>
+
+                                </label>
+
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    autocomplete="email"
+                                    inputmode="email"
+                                    required
+                                    aria-required="true"
+                                    placeholder="example@email.com">
+
+                            </div>
+
+
+                            <!-- SUBJECT -->
+
+                            <div class="form-group">
+
+                                <label for="subject">
+
+                                    Subject
+
+                                    <span class="required"
+                                          aria-hidden="true">
+                                        *
+                                    </span>
+
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="subject"
+                                    name="subject"
+                                    required
+                                    aria-required="true"
+                                    minlength="3"
+                                    placeholder="Enter subject">
+
+                            </div>
+
+
+                            <!-- MESSAGE -->
+
+                            <div class="form-group">
+
+                                <label for="message">
+
+                                    Message
+
+                                    <span class="required"
+                                          aria-hidden="true">
+                                        *
+                                    </span>
+
+                                </label>
+
+                                <textarea
+                                    id="message"
+                                    name="message"
+                                    rows="7"
+                                    required
+                                    aria-required="true"
+                                    minlength="10"
+                                    placeholder="Write your message here..."></textarea>
+
+                            </div>
+
+
+                            <button
+                                type="submit"
+                                class="button">
+
+                                Send Message
+
+                            </button>
+
+
+                            <p
+                                id="form-status"
+                                class="form-status"
+                                role="status"
+                                aria-live="polite">
+                            </p>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+
+    <footer>
+
+        <div class="container footer-container">
+
+            <p>
+                &copy; 2026 Abhishek Maurya.
+                All rights reserved.
+            </p>
+
+            <nav aria-label="Footer navigation">
+
+                <ul>
+
+                    <li>
+                        <a href="#home">
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#about">
+                            About
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#projects">
+                            Projects
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#contact">
+                            Contact
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =========================================
+         JAVASCRIPT
+    ========================================== -->
+
+    <script>
+
+        "use strict";
+
+        /*
+         * Accessible contact form handling
+         */
+
+        const contactForm =
+            document.getElementById("contactForm");
+
+        const formStatus =
+            document.getElementById("form-status");
+
+
+        contactForm.addEventListener(
+            "submit",
+            function (event) {
+
+                event.preventDefault();
+
+
+                /*
+                 * Let browser perform native
+                 * HTML5 validation.
+                 */
+
+                if (!contactForm.checkValidity()) {
+
+                    contactForm.reportValidity();
+
+                    return;
+                }
+
+
+                /*
+                 * Demo success message.
+                 *
+                 * Connect this form to a backend,
+                 * Formspree, Netlify Forms, or another
+                 * form-processing service for real messages.
+                 */
+
+                formStatus.textContent =
+                    "Thank you, Abhishek will get back to you soon.";
+
+                contactForm.reset();
+
+            }
+        );
+
+
+        /*
+         * Update current navigation link
+         * based on visible section.
+         */
+
+        const sections =
+            document.querySelectorAll(
+                "main section[id]"
+            );
+
+        const navLinks =
+            document.querySelectorAll(
+                "header nav a"
+            );
+
+
+        const observer =
+            new IntersectionObserver(
+                (entries) => {
+
+                    entries.forEach(
+                        (entry) => {
+
+                            if (entry.isIntersecting) {
+
+                                navLinks.forEach(
+                                    (link) => {
+
+                                        link.removeAttribute(
+                                            "aria-current"
+                                        );
+
+                                    }
+                                );
+
+
+                                const activeLink =
+                                    document.querySelector(
+                                        'header nav a[href="#' +
+                                        entry.target.id +
+                                        '"]'
+                                    );
+
+
+                                if (activeLink) {
+
+                                    activeLink.setAttribute(
+                                        "aria-current",
+                                        "page"
+                                    );
+
+                                }
+
+                            }
+
+                        }
+                    );
+
+                },
+                {
+                    threshold: 0.35
+                }
+            );
+
+
+        sections.forEach(
+            (section) => {
+
+                observer.observe(section);
+
+            }
+        );
+
+    </script>
+
+</body>
+</html>
